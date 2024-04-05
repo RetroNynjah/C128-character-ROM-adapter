@@ -18,11 +18,8 @@ This pin was bent out and connected directly to ground. This was fine because 27
 Pin 26 (NC or A13) was inserted into VCC in the ROM socket and pins 1 (VPP), 27 (PGM) and 28 (VCC) were all connected to Pin 26 (VCC) on the adapter. This means that any 2764/27128/27256/27512 EPROM can be used with the adapter if the character data is duplicated or is placed in the highest 8kB of the EPROM. I like to use modern AT27C256R EPROMs.
 
 <img src="images\2364-27128.svg" alt="Comparison of 2364 and 27128 pin-outs" width="400"/><br/>
-<<<<<<< Updated upstream
-Side by side comparion of 2364 ROM and 27128 EPROM illustrating address pin conflicts.
-=======
 Side by side comparion of 2364 ROM and 27128 EPROM illustrating address pin conflicts
->>>>>>> Stashed changes
+
 
 Thanks to Jani for insights and discussions and for his documentation about the original adapter which you can find at https://blog.worldofjani.com/?p=4614
 
