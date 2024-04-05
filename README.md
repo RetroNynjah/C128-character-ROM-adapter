@@ -13,13 +13,18 @@ Swapping the A11 and A12 pins also meant the charset layout had to be rearranged
 
 Another thing that needed handling was pin 18 (CE) of the 2764 EPROM which could't be inserted into the ROM socket where it would have ended up at A11.
 
-This pin was bent out and connected directly to ground. This was fine because 27xx EPROMs have two select lines (CE+OE) and the other select line alignes correctly with CE in the ROM socket so the chip would still be selected properly.
+This pin was bent out and connected directly to ground. This was fine because 27xx EPROMs have two select lines (CE & OE) and the other select line alignes correctly with CE in the ROM socket so the chip would still be selected properly.
 
 Pin 26 (NC or A13) was inserted into VCC in the ROM socket and pins 1 (VPP), 27 (PGM) and 28 (VCC) were all connected to Pin 26 (VCC) on the adapter. This means that any 2764/27128/27256/27512 EPROM can be used with the adapter if the character data is duplicated or is placed in the highest 8kB of the EPROM. I like to use modern AT27C256R EPROMs.
 
 <img src="images\2364-27128.svg" alt="Comparison of 2364 and 27128 pin-outs" width="400"/><br/>
+<<<<<<< Updated upstream
 Side by side comparion of 2364 ROM and 27128 EPROM illustrating address pin conflicts.
+=======
+Side by side comparion of 2364 ROM and 27128 EPROM illustrating address pin conflicts
+>>>>>>> Stashed changes
 
+Thanks to Jani for insights and discussions and for his documentation about the original adapter which you can find at https://blog.worldofjani.com/?p=4614
 
 ### Ordering PCBs
 There are gerber files in the gerbers directory.
@@ -40,7 +45,6 @@ But because A12 and A11 have switched places the character sets must be arranged
 3. US characters (lowercase/uppercase)
 4. National characters (lowercase/uppercase)
 
-
 ### Assembly
 <img src="rev1\images\rev1_pcb.png" alt="Render of PCB top side" width="300"/><br/>
 
@@ -49,7 +53,7 @@ But because A12 and A11 have switched places the character sets must be arranged
 3. Insert the EPROM in the adapter and align the notch with the marking on the board.
 4. Solder all the pins that have solder pads from the top side of the PCB to avoid adding too much solder to the bottom. This makes the adapter sit more flush in the socket.
 Pin 15 doesn't have to be soldered but it adds some rigidity to the adapter which can flex a bit otherwise.
-5. Cut or bend away the external pins 1,2,27,28 so that they won't touch anything when installing the adapter.
+5. Cut or bend away the external pins 1, 2, 27, 28 so that they won't touch anything when installing the adapter.
 6. Solder pin 20 to ground by pushing it down against the PCB and solder it to the special pad.
 7. Solder one end of a short cable (6 centimeters) to the single throughole on the adapter.
 8. Solder the other end of the cable to the via close to pin 22 of the ROM socket.
